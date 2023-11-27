@@ -1,0 +1,57 @@
+
+/* Class = "UILabel"; text = "Choisissez la taille de la police du titre. "; ObjectID = "9fw-yn-t1l"; */
+"9fw-yn-t1l.text" = "Choisissez la taille de la police du titre. ";
+
+/* Class = "UILabel"; text = "42"; ObjectID = "DTh-Rw-ZQI"; */
+"DTh-Rw-ZQI.text" = "42";
+
+/* Class = "UISegmentedControl"; MKk-wn-Pya.segmentTitles[0] = "First"; ObjectID = "MKk-wn-Pya"; */
+"MKk-wn-Pya.segmentTitles[0]" = "First";
+
+/* Class = "UISegmentedControl"; MKk-wn-Pya.segmentTitles[1] = "Second"; ObjectID = "MKk-wn-Pya"; */
+"MKk-wn-Pya.segmentTitles[1]" = "Second";
+
+/* Class = "UILabel"; text = "Taille des polices"; ObjectID = "NhW-Lp-X9x"; */
+"NhW-Lp-X9x.text" = "Taille des polices";
+
+/* Class = "UILabel"; text = "Pictogrammes"; ObjectID = "PU0-XC-hIw"; */
+"PU0-XC-hIw.text" = "Pictogrammes";
+
+/* Class = "UILabel"; text = "Label"; ObjectID = "RcJ-do-aHE"; */
+"RcJ-do-aHE.text" = "Label";
+
+/* Class = "UIButton"; normalTitle = "Ouvrir"; ObjectID = "XUg-ui-JXL"; */
+"XUg-ui-JXL.normalTitle" = "Ouvrir";
+
+/* Class = "UILabel"; text = "Taille par défaut"; ObjectID = "ZIY-va-RQn"; */
+"ZIY-va-RQn.text" = "Taille par défaut";
+
+/* Class = "UILabel"; text = "Empty state par défaut"; ObjectID = "cD8-dr-5KG"; */
+"cD8-dr-5KG.text" = "Empty state par défaut";
+
+/* Class = "UILabel"; text = "Play par défaut"; ObjectID = "dKy-rT-psB"; */
+"dKy-rT-psB.text" = "Play par défaut";
+
+/* Class = "UILabel"; text = "10"; ObjectID = "eQw-0w-yth"; */
+"eQw-0w-yth.text" = "10";
+
+/* Class = "UILabel"; text = "Label"; ObjectID = "hhc-A1-YMp"; */
+"hhc-A1-YMp.text" = "Label";
+
+/* Class = "UILabel"; text = "Pause par défaut"; ObjectID = "inh-fs-oSj"; */
+"inh-fs-oSj.text" = "Pause par défaut";
+
+/* Class = "UILabel"; text = "Affichage"; ObjectID = "kff-cg-YTr"; */
+"kff-cg-YTr.text" = "Affichage";
+
+/* Class = "UILabel"; text = "Taille par défaut"; ObjectID = "mgF-A5-t7m"; */
+"mgF-A5-t7m.text" = "Taille par défaut";
+
+/* Class = "UILabel"; text = "Choisissez la taille de la police de la description."; ObjectID = "ov1-cT-tLh"; */
+"ov1-cT-tLh.text" = "Choisissez la taille de la police de la description.";
+
+/* Class = "UILabel"; text = "10"; ObjectID = "wop-TW-SMD"; */
+"wop-TW-SMD.text" = "10";
+
+/* Class = "UILabel"; text = "42"; ObjectID = "zHd-3u-yUk"; */
+"zHd-3u-yUk.text" = "42";
