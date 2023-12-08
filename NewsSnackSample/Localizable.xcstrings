@@ -35,6 +35,23 @@
         }
       }
     },
+    "choose_zone_font_size" : {
+      "extractionState" : "manual",
+      "localizations" : {
+        "en" : {
+          "stringUnit" : {
+            "state" : "translated",
+            "value" : "Choose the zone font size."
+          }
+        },
+        "fr" : {
+          "stringUnit" : {
+            "state" : "translated",
+            "value" : "Choisissez la taille de la police de la zone."
+          }
+        }
+      }
+    },
     "default_empty_state" : {
       "extractionState" : "manual",
       "localizations" : {

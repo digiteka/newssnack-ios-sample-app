@@ -21,6 +21,7 @@
 		21B057572B021A4D00D97515 /* NewsSnackSDK in Frameworks */ = {isa = PBXBuildFile; productRef = 21B057562B021A4D00D97515 /* NewsSnackSDK */; };
 		21B0575A2B021A7C00D97515 /* NewsSnackSDK in Frameworks */ = {isa = PBXBuildFile; productRef = 21B057592B021A7C00D97515 /* NewsSnackSDK */; };
 		21B0575D2B021BF300D97515 /* NewsSnackSDK in Frameworks */ = {isa = PBXBuildFile; productRef = 21B0575C2B021BF300D97515 /* NewsSnackSDK */; };
+		21B89A302B231C87001107C5 /* NewsSnackSDK in Frameworks */ = {isa = PBXBuildFile; productRef = 21B89A2F2B231C87001107C5 /* NewsSnackSDK */; };
 		21FC84A02AF8EC4F00553056 /* Main.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 21FC84A12AF8EC4F00553056 /* Main.storyboard */; };
 		46C143B12AF15972002486F6 /* Localizable.xcstrings in Resources */ = {isa = PBXBuildFile; fileRef = 46C143B02AF15972002486F6 /* Localizable.xcstrings */; };
 		46C806322AF39773007CF0F6 /* String+Localize.swift in Sources */ = {isa = PBXBuildFile; fileRef = 46C806312AF39773007CF0F6 /* String+Localize.swift */; };
@@ -44,6 +45,7 @@
 			isa = PBXFrameworksBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				21B89A302B231C87001107C5 /* NewsSnackSDK in Frameworks */,
 				216C34952AF9500400984817 /* NewsSnackSDK in Frameworks */,
 				2142054C2AFA2CDA005C36E8 /* NewsSnackSDK in Frameworks */,
 				214205402AFA28F5005C36E8 /* NewsSnackSDK in Frameworks */,
@@ -135,6 +137,7 @@
 				21B057562B021A4D00D97515 /* NewsSnackSDK */,
 				21B057592B021A7C00D97515 /* NewsSnackSDK */,
 				21B0575C2B021BF300D97515 /* NewsSnackSDK */,
+				21B89A2F2B231C87001107C5 /* NewsSnackSDK */,
 			);
 			productName = NewsSnackSample;
 			productReference = 218E06292ABB1B9E0033C586 /* NewsSnackSample.app */;
@@ -166,7 +169,7 @@
 			);
 			mainGroup = 218E06202ABB1B9E0033C586;
 			packageReferences = (
-				21E11EEE2B1500FC00212778 /* XCRemoteSwiftPackageReference "newssnack-ios-build" */,
+				21B89A312B231D56001107C5 /* XCRemoteSwiftPackageReference "newssnack-ios-build" */,
 			);
 			productRefGroup = 218E062A2ABB1B9E0033C586 /* Products */;
 			projectDirPath = "";
@@ -331,7 +334,7 @@
 				ASSETCATALOG_COMPILER_GLOBAL_ACCENT_COLOR_NAME = AccentColor;
 				ASSETCATALOG_COMPILER_INCLUDE_ALL_APPICON_ASSETS = NO;
 				CODE_SIGN_STYLE = Automatic;
-				CURRENT_PROJECT_VERSION = 6;
+				CURRENT_PROJECT_VERSION = 0;
 				DEVELOPMENT_TEAM = F7XJAAS3JA;
 				GENERATE_INFOPLIST_FILE = YES;
 				INFOPLIST_FILE = NewsSnackSample/Info.plist;
@@ -347,7 +350,7 @@
 					"$(inherited)",
 					"@executable_path/Frameworks",
 				);
-				MARKETING_VERSION = 1.0;
+				MARKETING_VERSION = 1.0.1;
 				PRODUCT_BUNDLE_IDENTIFIER = com.beapp.dtk.NewsSnackSample;
 				PRODUCT_NAME = "$(TARGET_NAME)";
 				SWIFT_EMIT_LOC_STRINGS = YES;
@@ -365,7 +368,7 @@
 				CODE_SIGN_IDENTITY = "Apple Distribution";
 				"CODE_SIGN_IDENTITY[sdk=iphoneos*]" = "iPhone Distribution";
 				CODE_SIGN_STYLE = Manual;
-				CURRENT_PROJECT_VERSION = 6;
+				CURRENT_PROJECT_VERSION = 0;
 				DEVELOPMENT_TEAM = F7XJAAS3JA;
 				"DEVELOPMENT_TEAM[sdk=iphoneos*]" = F7XJAAS3JA;
 				GENERATE_INFOPLIST_FILE = YES;
@@ -382,7 +385,7 @@
 					"$(inherited)",
 					"@executable_path/Frameworks",
 				);
-				MARKETING_VERSION = 1.0;
+				MARKETING_VERSION = 1.0.1;
 				PRODUCT_BUNDLE_IDENTIFIER = com.beapp.dtk.NewsSnackSample;
 				PRODUCT_NAME = "$(TARGET_NAME)";
 				PROVISIONING_PROFILE_SPECIFIER = "";
@@ -417,12 +420,12 @@
 /* End XCConfigurationList section */
 
 /* Begin XCRemoteSwiftPackageReference section */
-		21E11EEE2B1500FC00212778 /* XCRemoteSwiftPackageReference "newssnack-ios-build" */ = {
+		21B89A312B231D56001107C5 /* XCRemoteSwiftPackageReference "newssnack-ios-build" */ = {
 			isa = XCRemoteSwiftPackageReference;
 			repositoryURL = "git@github.com:digiteka/newssnack-ios-build.git";
 			requirement = {
-				branch = main;
-				kind = branch;
+				kind = exactVersion;
+				version = 1.0.1;
 			};
 		};
 /* End XCRemoteSwiftPackageReference section */
@@ -465,6 +468,10 @@
 			productName = NewsSnackSDK;
 		};
 		21B0575C2B021BF300D97515 /* NewsSnackSDK */ = {
+			isa = XCSwiftPackageProductDependency;
+			productName = NewsSnackSDK;
+		};
+		21B89A2F2B231C87001107C5 /* NewsSnackSDK */ = {
 			isa = XCSwiftPackageProductDependency;
 			productName = NewsSnackSDK;
 		};

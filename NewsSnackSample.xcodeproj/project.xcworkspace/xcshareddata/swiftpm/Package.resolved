@@ -14,8 +14,8 @@
       "kind" : "remoteSourceControl",
       "location" : "git@github.com:digiteka/newssnack-ios-build.git",
       "state" : {
-        "branch" : "main",
-        "revision" : "c606c16d791d56b6513d35076a10551405b83801"
+        "revision" : "0e3e618034407856564dc5b3687983f620d99804",
+        "version" : "1.0.1"
       }
     }
   ],

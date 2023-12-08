@@ -14,11 +14,13 @@ class ViewController: UIViewController {
             scrollView.showsVerticalScrollIndicator = false
         }
     }
+    // MARK: - Fonts IBOutlets
     @IBOutlet private weak var fontSizeLabel: UILabel! {
         didSet {
             fontSizeLabel.text = "title_font_size".localize
         }
     }
+    // MARK: Title Font IBOutlets
     @IBOutlet private weak var titleFontSizeLabel: UILabel! {
         didSet {
             titleFontSizeLabel.text = "choose_title_font_size".localize
@@ -43,6 +45,7 @@ class ViewController: UIViewController {
             fontSizeTitleSlider.isEnabled = false
         }
     }
+    // MARK: Description Font IBOutlets
     @IBOutlet private weak var descriptionFontSizeLabel: UILabel! {
         didSet {
             descriptionFontSizeLabel.text = "choose_description_font_size".localize
@@ -67,6 +70,32 @@ class ViewController: UIViewController {
             fontSizeDescriptionSlider.isEnabled = false
         }
     }
+    // MARK: Zone Font IBOutlets
+    @IBOutlet private weak var zoneFontSizeLabel: UILabel! {
+        didSet {
+            zoneFontSizeLabel.text = "choose_zone_font_size".localize
+        }
+    }
+    @IBOutlet private weak var zoneDefaultSizeLabel: UILabel! {
+        didSet {
+            zoneDefaultSizeLabel.text = "default_font_size".localize
+        }
+    }
+    @IBOutlet private weak var zoneFontSystemSwitch: UISwitch! {
+        didSet {
+            zoneFontSystemSwitch.isOn = true
+        }
+    }
+    @IBOutlet private weak var currentValueZoneSliderLabel: UILabel!
+    @IBOutlet private weak var fontSizeZoneSlider: UISlider! {
+        didSet {
+            fontSizeZoneSlider.minimumValue = 10
+            fontSizeZoneSlider.maximumValue = 42
+            fontSizeZoneSlider.value = 25
+            fontSizeZoneSlider.isEnabled = false
+        }
+    }
+    // MARK: - Theme IBOutlets
     @IBOutlet private weak var displayLabel: UILabel! {
         didSet {
             displayLabel.text = "display".localize
@@ -79,6 +108,7 @@ class ViewController: UIViewController {
             themeSelectorControl.setTitle("Auto", forSegmentAt: 2)
         }
     }
+    // MARK: - Images IBOutlets
     @IBOutlet private weak var imagesLabel: UILabel! {
         didSet {
             imagesLabel.text = "images".localize
@@ -115,6 +145,7 @@ class ViewController: UIViewController {
             emptyStateImageSwitch.isOn = true
         }
     }
+    // MARK: - Open Button IBOutlet
     @IBOutlet private weak var openButton: UIButton! {
         didSet {
             openButton.layer.cornerRadius = 10
@@ -122,8 +153,10 @@ class ViewController: UIViewController {
         }
     }
     
+    // MARK: - Private vars
     private var titleFont: UIFont?
     private var descriptionFont: UIFont?
+    private var zoneFont: UIFont?
     private var forcedUserInterfaceStyle: UIUserInterfaceStyle?
     private var playImage: String?
     private var pauseImage: String?
@@ -140,10 +173,12 @@ class ViewController: UIViewController {
         }
     }
     
+    // MARK: - Lifecyle functions
     override func viewDidLoad() {
         super.viewDidLoad()
         updateTitleFont()
         updateDescriptionFont()
+        updateZoneFont()
     }
     
     private func updateTitleFont() {
@@ -154,6 +189,11 @@ class ViewController: UIViewController {
     private func updateDescriptionFont() {
         currentValueDescriptionSliderLabel.text = String(Int(self.fontSizeDescriptionSlider.value))
         descriptionFont = descriptionFontSystemSwitch.isOn ? nil : UIFont.systemFont(ofSize: CGFloat(fontSizeDescriptionSlider.value))
+    }
+    
+    private func updateZoneFont() {
+        currentValueZoneSliderLabel.text = String(Int(self.fontSizeZoneSlider.value))
+        zoneFont = zoneFontSystemSwitch.isOn ? nil : UIFont.systemFont(ofSize: CGFloat(fontSizeZoneSlider.value))
     }
     
     @IBAction private func titleFontSystemSwitch(_ sender: UISwitch) {
@@ -174,6 +214,15 @@ class ViewController: UIViewController {
         updateDescriptionFont()
     }
     
+    @IBAction private func zoneFontSystemSwitch(_ sender: UISwitch) {
+        fontSizeZoneSlider.isEnabled = !zoneFontSystemSwitch.isOn
+        updateZoneFont()
+    }
+    
+    @IBAction private func fontSizeZoneSlider(_ sender: UISlider) {
+        updateZoneFont()
+    }
+    
     @IBAction private func themeSelectorControl(_ sender: UISegmentedControl) {
         forcedUserInterfaceStyle = getCurrentSelectedTheme()
     }
@@ -192,7 +241,7 @@ class ViewController: UIViewController {
     
     @IBAction private func openButtonTapped(_ sender: UIButton) {
         do {
-            let vc = try NewsSnack.shared.newsSnackViewController(uiConfig: DTKNSUIConfig(forcedUserInterfaceStyle: forcedUserInterfaceStyle, titleFont: titleFont, descriptionFont: descriptionFont, playImageName: playImage, pauseImageName: pauseImage, emptyStateImageName: emptyStateImage))
+            let vc = try NewsSnack.shared.newsSnackViewController(uiConfig: DTKNSUIConfig(forcedUserInterfaceStyle: forcedUserInterfaceStyle, titleFont: titleFont, descriptionFont: descriptionFont, zoneFont: zoneFont, playImageName: playImage, pauseImageName: pauseImage, emptyStateImageName: emptyStateImage))
             navigationController?.pushViewController(vc, animated: true)
         } catch {
             print(error)

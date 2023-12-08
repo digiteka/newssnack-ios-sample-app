@@ -42,19 +42,19 @@ class AppDelegate: UIResponder, UIApplicationDelegate {
 
 // MARK: DTKNSLoggerDelegate
 extension AppDelegate: DTKNSLoggerDelegate {
-    func debug(message: String) {
+    func NewsSnackDebug(message: String) {
         print("debug " + message)
     }
 
-    func info(message: String) {
+    func NewsSnackInfo(message: String) {
         print("info " + message)
     }
 
-    func warn(message: String) {
+    func NewsSnackWarn(message: String) {
         print("warn " + message)
     }
 
-    func error(message: String, error: Error?) {
+    func NewsSnackError(message: String, error: Error?) {
         print("error " + message, error as Any)
     }
 }
