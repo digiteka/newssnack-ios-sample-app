@@ -176,6 +176,9 @@ class ViewController: UIViewController {
     // MARK: - Lifecyle functions
     override func viewDidLoad() {
         super.viewDidLoad()
+        
+        navigationItem.title = "settings".localize
+        
         updateTitleFont()
         updateDescriptionFont()
         updateZoneFont()
