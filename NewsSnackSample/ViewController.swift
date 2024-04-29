@@ -6,7 +6,7 @@
 //
 
 import UIKit
-import NewsSnackSDK
+import VideoFeedSDK
 
 class ViewController: UIViewController {
     @IBOutlet private weak var scrollView: UIScrollView! {
@@ -241,7 +241,22 @@ class ViewController: UIViewController {
     
     @IBAction private func openButtonTapped(_ sender: UIButton) {
         do {
-            let vc = try NewsSnack.shared.newsSnackViewController(uiConfig: DTKNSUIConfig(forcedUserInterfaceStyle: forcedUserInterfaceStyle, titleFont: titleFont, descriptionFont: descriptionFont, zoneFont: zoneFont, playImageName: playImage, pauseImageName: pauseImage, emptyStateImageName: emptyStateImage))
+            let vc = try VideoFeed.shared.videoFeedViewController(
+                uiConfig: DTKNSUIConfig(
+                    forcedUserInterfaceStyle: forcedUserInterfaceStyle,
+                    titleFont: titleFont,
+                    descriptionFont: descriptionFont,
+                    zoneFont: zoneFont,
+                    playImageName: playImage,
+                    pauseImageName: pauseImage,
+                    emptyStateImageName: emptyStateImage,
+                    adsDisabled: false,
+                    tagParamsFor: { zoneName, adId in
+                        return ["zone": zoneName, "ad": adId]
+                    }
+                ),
+                injector: CustomInjector()
+            )
             navigationController?.pushViewController(vc, animated: true)
         } catch {
             print(error)

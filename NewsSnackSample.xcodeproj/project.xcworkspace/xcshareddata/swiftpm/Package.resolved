@@ -5,17 +5,17 @@
       "kind" : "remoteSourceControl",
       "location" : "https://github.com/onevcat/Kingfisher.git",
       "state" : {
-        "revision" : "277f1ab2c6664b19b4a412e32b094b201e2d5757",
-        "version" : "7.10.0"
+        "revision" : "5b92f029fab2cce44386d28588098b5be0824ef5",
+        "version" : "7.11.0"
       }
     },
     {
-      "identity" : "newssnack-ios-build",
+      "identity" : "swift-package-manager-google-interactive-media-ads-ios",
       "kind" : "remoteSourceControl",
-      "location" : "git@github.com:digiteka/newssnack-ios-build.git",
+      "location" : "https://github.com/googleads/swift-package-manager-google-interactive-media-ads-ios",
       "state" : {
-        "revision" : "0e3e618034407856564dc5b3687983f620d99804",
-        "version" : "1.0.1"
+        "revision" : "776d2d6a1d8b969d885b5c929c87afa42799ae54",
+        "version" : "3.22.0"
       }
     }
   ],
