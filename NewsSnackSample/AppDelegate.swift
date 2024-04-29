@@ -14,7 +14,7 @@ class AppDelegate: UIResponder, UIApplicationDelegate {
 
     func application(_ application: UIApplication, didFinishLaunchingWithOptions launchOptions: [UIApplication.LaunchOptionsKey: Any]?) -> Bool {
         do {
-            try NewsSnack.shared.initialize(config: DTKNSConfig(mdtk: "01472001"))
+            try VideoFeed.shared.initialize(config: DTKNSConfig(mdtk: "01472001", debugMode: false), linkDelegate: self)
         } catch {
             print("Can't init NewsSnack with error \(error.localizedDescription)")
         }
@@ -64,12 +64,11 @@ class CustomInjector: NSObject, DTKNSInjector {
 
 }
 
+// MARK: DTKNSLinkDelegate
 extension AppDelegate:DTKNSLinkDelegate {
     func shouldOpenLink(_ url: URL) {
         print("DO something with \(url)")
     }
-    
-
 }
 
 // MARK: DTKNSLoggerDelegate
