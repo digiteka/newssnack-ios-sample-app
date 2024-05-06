@@ -1,6 +1,6 @@
 //
 //  AppDelegate.swift
-//  NewsSnackSample
+//  VideoFeedSample
 //
 //  Created by Cédric Derache on 20/09/2023.
 //
@@ -16,7 +16,7 @@ class AppDelegate: UIResponder, UIApplicationDelegate {
         do {
             try VideoFeed.shared.initialize(config: DTKNSConfig(mdtk: "01472001", debugMode: false), linkDelegate: self)
         } catch {
-            print("Can't init NewsSnack with error \(error.localizedDescription)")
+            print("Can't init VideoFeed with error \(error.localizedDescription)")
         }
         VideoFeed.shared.setLoggerDelegate(self)
         VideoFeed.shared.setTrackingDelegate(self)
@@ -40,34 +40,10 @@ class AppDelegate: UIResponder, UIApplicationDelegate {
     }
 }
 
-
-class CustomInjector: NSObject, DTKNSInjector {
-    func hasViewAvailableFor(placementId: String) -> Bool {
-        true
-    }
-
-    func buildViewFor(placementId: String) -> UIView? {
-        let view = UIView(frame: CGRect(x: 0, y: 0, width: 300, height: 250))
-        view.backgroundColor = .red
-        return view
-    }
-
-    func onViewVisibilityChanged(view: UIView, isVisible: Bool) {
-        print("onViewVisibilityChanged \(isVisible)")
-    }
-
-    func setTagParams(zoneName: String, adID: String) -> [String : String] {
-        print("nothing to do here")
-        return [:]
-    }
-
-
-}
-
 // MARK: DTKNSLinkDelegate
 extension AppDelegate:DTKNSLinkDelegate {
     func shouldOpenLink(_ url: URL) {
-        print("DO something with \(url)")
+        print("Do something with \(url)")
     }
 }
 
@@ -75,12 +51,10 @@ extension AppDelegate:DTKNSLinkDelegate {
 extension AppDelegate: DTKNSLoggerDelegate {
     func VideoFeedDebug(message: String) {
         print("debug " + message)
-
     }
     
     func VideoFeedInfo(message: String) {
         print("info " + message)
-
     }
     
     func VideoFeedWarn(message: String) {
@@ -90,12 +64,11 @@ extension AppDelegate: DTKNSLoggerDelegate {
     func VideoFeedError(message: String, error: Error?) {
         print("error " + message, error as Any)
     }
-
 }
 
 // MARK: DTKNSLoggerDelegate
 extension AppDelegate: DTKNSTrackingDelegate {
     func trackEvent(_ event: TrackingEvent, sessionId: String?) {
-        //print("Tracking event received \(event) for sessionId \(sessionId ?? "nil")")
+        print("Tracking event received \(event) for sessionId \(sessionId ?? "nil")")
     }
 }

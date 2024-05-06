@@ -1,6 +1,6 @@
 //
 //  ViewController.swift
-//  NewsSnackSample
+//  VideoFeedSample
 //
 //  Created by Cédric Derache on 20/09/2023.
 //
@@ -249,13 +249,8 @@ class ViewController: UIViewController {
                     zoneFont: zoneFont,
                     playImageName: playImage,
                     pauseImageName: pauseImage,
-                    emptyStateImageName: emptyStateImage,
-                    adsDisabled: false,
-                    tagParamsFor: { zoneName, adId in
-                        return ["zone": zoneName, "ad": adId]
-                    }
-                ),
-                injector: CustomInjector()
+                    emptyStateImageName: emptyStateImage
+                )
             )
             navigationController?.pushViewController(vc, animated: true)
         } catch {
