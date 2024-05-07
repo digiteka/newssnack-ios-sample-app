@@ -8,6 +8,15 @@
         "revision" : "5b92f029fab2cce44386d28588098b5be0824ef5",
         "version" : "7.11.0"
       }
+    },
+    {
+      "identity" : "newssnack-ios-build",
+      "kind" : "remoteSourceControl",
+      "location" : "https://github.com/digiteka/newssnack-ios-build.git",
+      "state" : {
+        "revision" : "b27c89df8aff3c33aa6caeda0d8f56edbfe9c7bb",
+        "version" : "1.1.1"
+      }
     }
   ],
   "version" : 2

@@ -7,12 +7,11 @@
 	objects = {
 
 /* Begin PBXBuildFile section */
-		1F4112A42BC7D650001A9732 /* VideoFeedSDK in Frameworks */ = {isa = PBXBuildFile; productRef = 1F4112A32BC7D650001A9732 /* VideoFeedSDK */; };
-		21292B0E2BDFBE0C00E75C90 /* VideoFeedSDK in Frameworks */ = {isa = PBXBuildFile; productRef = 21292B0D2BDFBE0C00E75C90 /* VideoFeedSDK */; };
 		218E062D2ABB1B9E0033C586 /* AppDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = 218E062C2ABB1B9E0033C586 /* AppDelegate.swift */; };
 		218E062F2ABB1B9E0033C586 /* SceneDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = 218E062E2ABB1B9E0033C586 /* SceneDelegate.swift */; };
 		218E06312ABB1B9E0033C586 /* ViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 218E06302ABB1B9E0033C586 /* ViewController.swift */; };
 		218E06362ABB1B9F0033C586 /* Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = 218E06352ABB1B9F0033C586 /* Assets.xcassets */; };
+		21DC020B2BEA38AE00A692F4 /* VideoFeedSDK in Frameworks */ = {isa = PBXBuildFile; productRef = 21DC020A2BEA38AE00A692F4 /* VideoFeedSDK */; };
 		21FC84A02AF8EC4F00553056 /* Main.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 21FC84A12AF8EC4F00553056 /* Main.storyboard */; };
 		46C143B12AF15972002486F6 /* Localizable.xcstrings in Resources */ = {isa = PBXBuildFile; fileRef = 46C143B02AF15972002486F6 /* Localizable.xcstrings */; };
 		46C806322AF39773007CF0F6 /* String+Localize.swift in Sources */ = {isa = PBXBuildFile; fileRef = 46C806312AF39773007CF0F6 /* String+Localize.swift */; };
@@ -35,8 +34,7 @@
 			isa = PBXFrameworksBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
-				1F4112A42BC7D650001A9732 /* VideoFeedSDK in Frameworks */,
-				21292B0E2BDFBE0C00E75C90 /* VideoFeedSDK in Frameworks */,
+				21DC020B2BEA38AE00A692F4 /* VideoFeedSDK in Frameworks */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -107,8 +105,7 @@
 			);
 			name = VideoFeedSample;
 			packageProductDependencies = (
-				1F4112A32BC7D650001A9732 /* VideoFeedSDK */,
-				21292B0D2BDFBE0C00E75C90 /* VideoFeedSDK */,
+				21DC020A2BEA38AE00A692F4 /* VideoFeedSDK */,
 			);
 			productName = NewsSnackSample;
 			productReference = 218E06292ABB1B9E0033C586 /* VideoFeedSample.app */;
@@ -140,6 +137,7 @@
 			);
 			mainGroup = 218E06202ABB1B9E0033C586;
 			packageReferences = (
+				21DC02092BEA38AE00A692F4 /* XCRemoteSwiftPackageReference "newssnack-ios-build" */,
 			);
 			productRefGroup = 218E062A2ABB1B9E0033C586 /* Products */;
 			projectDirPath = "";
@@ -307,7 +305,7 @@
 				CURRENT_PROJECT_VERSION = 0;
 				DEVELOPMENT_TEAM = F7XJAAS3JA;
 				GENERATE_INFOPLIST_FILE = YES;
-				INFOPLIST_FILE = NewsSnackSample/Info.plist;
+				INFOPLIST_FILE = VideoFeedSample/Info.plist;
 				INFOPLIST_KEY_UIApplicationSupportsIndirectInputEvents = YES;
 				INFOPLIST_KEY_UILaunchStoryboardName = LaunchScreen;
 				INFOPLIST_KEY_UIMainStoryboardFile = Main;
@@ -321,7 +319,7 @@
 					"@executable_path/Frameworks",
 				);
 				MARKETING_VERSION = 1.0.1;
-				PRODUCT_BUNDLE_IDENTIFIER = com.beapp.dtk.NewsSnackSample;
+				PRODUCT_BUNDLE_IDENTIFIER = com.beapp.dtk.VideoFeedSample;
 				PRODUCT_NAME = "$(TARGET_NAME)";
 				SWIFT_EMIT_LOC_STRINGS = YES;
 				SWIFT_VERSION = 5.0;
@@ -342,7 +340,7 @@
 				DEVELOPMENT_TEAM = F7XJAAS3JA;
 				"DEVELOPMENT_TEAM[sdk=iphoneos*]" = F7XJAAS3JA;
 				GENERATE_INFOPLIST_FILE = YES;
-				INFOPLIST_FILE = NewsSnackSample/Info.plist;
+				INFOPLIST_FILE = VideoFeedSample/Info.plist;
 				INFOPLIST_KEY_UIApplicationSupportsIndirectInputEvents = YES;
 				INFOPLIST_KEY_UILaunchStoryboardName = LaunchScreen;
 				INFOPLIST_KEY_UIMainStoryboardFile = Main;
@@ -356,7 +354,7 @@
 					"@executable_path/Frameworks",
 				);
 				MARKETING_VERSION = 1.0.1;
-				PRODUCT_BUNDLE_IDENTIFIER = com.beapp.dtk.NewsSnackSample;
+				PRODUCT_BUNDLE_IDENTIFIER = com.beapp.dtk.VideoFeedSample;
 				PRODUCT_NAME = "$(TARGET_NAME)";
 				PROVISIONING_PROFILE_SPECIFIER = "";
 				"PROVISIONING_PROFILE_SPECIFIER[sdk=iphoneos*]" = "NewsSnack Sample - AppStore";
@@ -389,13 +387,21 @@
 		};
 /* End XCConfigurationList section */
 
-/* Begin XCSwiftPackageProductDependency section */
-		1F4112A32BC7D650001A9732 /* VideoFeedSDK */ = {
-			isa = XCSwiftPackageProductDependency;
-			productName = VideoFeedSDK;
+/* Begin XCRemoteSwiftPackageReference section */
+		21DC02092BEA38AE00A692F4 /* XCRemoteSwiftPackageReference "newssnack-ios-build" */ = {
+			isa = XCRemoteSwiftPackageReference;
+			repositoryURL = "https://github.com/digiteka/newssnack-ios-build.git";
+			requirement = {
+				kind = exactVersion;
+				version = 1.1.1;
+			};
 		};
-		21292B0D2BDFBE0C00E75C90 /* VideoFeedSDK */ = {
+/* End XCRemoteSwiftPackageReference section */
+
+/* Begin XCSwiftPackageProductDependency section */
+		21DC020A2BEA38AE00A692F4 /* VideoFeedSDK */ = {
 			isa = XCSwiftPackageProductDependency;
+			package = 21DC02092BEA38AE00A692F4 /* XCRemoteSwiftPackageReference "newssnack-ios-build" */;
 			productName = VideoFeedSDK;
 		};
 /* End XCSwiftPackageProductDependency section */
