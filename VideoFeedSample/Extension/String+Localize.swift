@@ -1,6 +1,6 @@
 //
 //  String+Localize.swift
-//  NewsSnackSample
+//  VideoFeedSample
 //
 //  Created by Laurie Biguet on 02/11/2023.
 //

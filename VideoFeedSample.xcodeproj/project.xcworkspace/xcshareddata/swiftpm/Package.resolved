@@ -5,17 +5,17 @@
       "kind" : "remoteSourceControl",
       "location" : "https://github.com/onevcat/Kingfisher.git",
       "state" : {
-        "revision" : "277f1ab2c6664b19b4a412e32b094b201e2d5757",
-        "version" : "7.10.0"
+        "revision" : "5b92f029fab2cce44386d28588098b5be0824ef5",
+        "version" : "7.11.0"
       }
     },
     {
       "identity" : "newssnack-ios-build",
       "kind" : "remoteSourceControl",
-      "location" : "git@github.com:digiteka/newssnack-ios-build.git",
+      "location" : "https://github.com/digiteka/newssnack-ios-build.git",
       "state" : {
-        "revision" : "0e3e618034407856564dc5b3687983f620d99804",
-        "version" : "1.0.1"
+        "revision" : "b27c89df8aff3c33aa6caeda0d8f56edbfe9c7bb",
+        "version" : "1.1.1"
       }
     }
   ],

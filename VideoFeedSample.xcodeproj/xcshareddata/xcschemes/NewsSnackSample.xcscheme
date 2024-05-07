@@ -15,9 +15,9 @@
             <BuildableReference
                BuildableIdentifier = "primary"
                BlueprintIdentifier = "218E06282ABB1B9E0033C586"
-               BuildableName = "NewsSnackSample.app"
-               BlueprintName = "NewsSnackSample"
-               ReferencedContainer = "container:NewsSnackSample.xcodeproj">
+               BuildableName = "VideoFeedSample.app"
+               BlueprintName = "VideoFeedSample"
+               ReferencedContainer = "container:VideoFeedSample.xcodeproj">
             </BuildableReference>
          </BuildActionEntry>
       </BuildActionEntries>
@@ -44,9 +44,9 @@
          <BuildableReference
             BuildableIdentifier = "primary"
             BlueprintIdentifier = "218E06282ABB1B9E0033C586"
-            BuildableName = "NewsSnackSample.app"
-            BlueprintName = "NewsSnackSample"
-            ReferencedContainer = "container:NewsSnackSample.xcodeproj">
+            BuildableName = "VideoFeedSample.app"
+            BlueprintName = "VideoFeedSample"
+            ReferencedContainer = "container:VideoFeedSample.xcodeproj">
          </BuildableReference>
       </BuildableProductRunnable>
    </LaunchAction>
@@ -61,9 +61,9 @@
          <BuildableReference
             BuildableIdentifier = "primary"
             BlueprintIdentifier = "218E06282ABB1B9E0033C586"
-            BuildableName = "NewsSnackSample.app"
-            BlueprintName = "NewsSnackSample"
-            ReferencedContainer = "container:NewsSnackSample.xcodeproj">
+            BuildableName = "VideoFeedSample.app"
+            BlueprintName = "VideoFeedSample"
+            ReferencedContainer = "container:VideoFeedSample.xcodeproj">
          </BuildableReference>
       </BuildableProductRunnable>
    </ProfileAction>

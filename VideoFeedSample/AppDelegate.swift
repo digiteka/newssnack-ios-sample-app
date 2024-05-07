@@ -1,12 +1,12 @@
 //
 //  AppDelegate.swift
-//  NewsSnackSample
+//  VideoFeedSample
 //
 //  Created by Cédric Derache on 20/09/2023.
 //
 
 import UIKit
-import NewsSnackSDK
+import VideoFeedSDK
 
 @main
 class AppDelegate: UIResponder, UIApplicationDelegate {
@@ -14,12 +14,12 @@ class AppDelegate: UIResponder, UIApplicationDelegate {
 
     func application(_ application: UIApplication, didFinishLaunchingWithOptions launchOptions: [UIApplication.LaunchOptionsKey: Any]?) -> Bool {
         do {
-            try NewsSnack.shared.initialize(config: DTKNSConfig(mdtk: "01472001"))
+            try VideoFeed.shared.initialize(config: DTKNSConfig(mdtk: "01472001", debugMode: false), linkDelegate: self)
         } catch {
-            print("Can't init NewsSnack with error \(error.localizedDescription)")
+            print("Can't init VideoFeed with error \(error.localizedDescription)")
         }
-        NewsSnack.shared.setLoggerDelegate(self)
-        NewsSnack.shared.setTrackingDelegate(self)
+        VideoFeed.shared.setLoggerDelegate(self)
+        VideoFeed.shared.setTrackingDelegate(self)
 
         return true
     }
@@ -40,21 +40,28 @@ class AppDelegate: UIResponder, UIApplicationDelegate {
     }
 }
 
+// MARK: DTKNSLinkDelegate
+extension AppDelegate:DTKNSLinkDelegate {
+    func shouldOpenLink(_ url: URL) {
+        print("Do something with \(url)")
+    }
+}
+
 // MARK: DTKNSLoggerDelegate
 extension AppDelegate: DTKNSLoggerDelegate {
-    func NewsSnackDebug(message: String) {
+    func VideoFeedDebug(message: String) {
         print("debug " + message)
     }
-
-    func NewsSnackInfo(message: String) {
+    
+    func VideoFeedInfo(message: String) {
         print("info " + message)
     }
-
-    func NewsSnackWarn(message: String) {
+    
+    func VideoFeedWarn(message: String) {
         print("warn " + message)
     }
-
-    func NewsSnackError(message: String, error: Error?) {
+    
+    func VideoFeedError(message: String, error: Error?) {
         print("error " + message, error as Any)
     }
 }

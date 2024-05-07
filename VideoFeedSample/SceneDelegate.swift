@@ -1,6 +1,6 @@
 //
 //  SceneDelegate.swift
-//  NewsSnackSample
+//  VideoFeedSample
 //
 //  Created by Cédric Derache on 20/09/2023.
 //
