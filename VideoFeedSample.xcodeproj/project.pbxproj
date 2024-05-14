@@ -7,6 +7,9 @@
 	objects = {
 
 /* Begin PBXBuildFile section */
+		215AAB6B2BF38F05008954C1 /* README.md in Resources */ = {isa = PBXBuildFile; fileRef = 215AAB682BF38F05008954C1 /* README.md */; };
+		215AAB6C2BF38F05008954C1 /* LICENSE in Resources */ = {isa = PBXBuildFile; fileRef = 215AAB692BF38F05008954C1 /* LICENSE */; };
+		215AAB6D2BF38F05008954C1 /* README.fr.md in Resources */ = {isa = PBXBuildFile; fileRef = 215AAB6A2BF38F05008954C1 /* README.fr.md */; };
 		218E062D2ABB1B9E0033C586 /* AppDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = 218E062C2ABB1B9E0033C586 /* AppDelegate.swift */; };
 		218E062F2ABB1B9E0033C586 /* SceneDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = 218E062E2ABB1B9E0033C586 /* SceneDelegate.swift */; };
 		218E06312ABB1B9E0033C586 /* ViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 218E06302ABB1B9E0033C586 /* ViewController.swift */; };
@@ -18,6 +21,9 @@
 /* End PBXBuildFile section */
 
 /* Begin PBXFileReference section */
+		215AAB682BF38F05008954C1 /* README.md */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = net.daringfireball.markdown; path = README.md; sourceTree = "<group>"; };
+		215AAB692BF38F05008954C1 /* LICENSE */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = text; path = LICENSE; sourceTree = "<group>"; };
+		215AAB6A2BF38F05008954C1 /* README.fr.md */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = net.daringfireball.markdown; path = README.fr.md; sourceTree = "<group>"; };
 		218E06292ABB1B9E0033C586 /* VideoFeedSample.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = VideoFeedSample.app; sourceTree = BUILT_PRODUCTS_DIR; };
 		218E062C2ABB1B9E0033C586 /* AppDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AppDelegate.swift; sourceTree = "<group>"; };
 		218E062E2ABB1B9E0033C586 /* SceneDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SceneDelegate.swift; sourceTree = "<group>"; };
@@ -44,6 +50,9 @@
 		218E06202ABB1B9E0033C586 = {
 			isa = PBXGroup;
 			children = (
+				215AAB692BF38F05008954C1 /* LICENSE */,
+				215AAB6A2BF38F05008954C1 /* README.fr.md */,
+				215AAB682BF38F05008954C1 /* README.md */,
 				218E062B2ABB1B9E0033C586 /* VideoFeedSample */,
 				218E062A2ABB1B9E0033C586 /* Products */,
 				218E064E2ABB1D0E0033C586 /* Frameworks */,
@@ -107,7 +116,7 @@
 			packageProductDependencies = (
 				21DC020A2BEA38AE00A692F4 /* VideoFeedSDK */,
 			);
-			productName = NewsSnackSample;
+			productName = VideoFeedSample;
 			productReference = 218E06292ABB1B9E0033C586 /* VideoFeedSample.app */;
 			productType = "com.apple.product-type.application";
 		};
@@ -154,8 +163,11 @@
 			buildActionMask = 2147483647;
 			files = (
 				218E06362ABB1B9F0033C586 /* Assets.xcassets in Resources */,
+				215AAB6D2BF38F05008954C1 /* README.fr.md in Resources */,
 				46C143B12AF15972002486F6 /* Localizable.xcstrings in Resources */,
+				215AAB6B2BF38F05008954C1 /* README.md in Resources */,
 				21FC84A02AF8EC4F00553056 /* Main.storyboard in Resources */,
+				215AAB6C2BF38F05008954C1 /* LICENSE in Resources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -318,7 +330,7 @@
 					"$(inherited)",
 					"@executable_path/Frameworks",
 				);
-				MARKETING_VERSION = 1.0.1;
+				MARKETING_VERSION = 1.1.0;
 				PRODUCT_BUNDLE_IDENTIFIER = com.beapp.dtk.VideoFeedSample;
 				PRODUCT_NAME = "$(TARGET_NAME)";
 				SWIFT_EMIT_LOC_STRINGS = YES;
@@ -353,11 +365,11 @@
 					"$(inherited)",
 					"@executable_path/Frameworks",
 				);
-				MARKETING_VERSION = 1.0.1;
+				MARKETING_VERSION = 1.1.0;
 				PRODUCT_BUNDLE_IDENTIFIER = com.beapp.dtk.VideoFeedSample;
 				PRODUCT_NAME = "$(TARGET_NAME)";
 				PROVISIONING_PROFILE_SPECIFIER = "";
-				"PROVISIONING_PROFILE_SPECIFIER[sdk=iphoneos*]" = "NewsSnack Sample - AppStore";
+				"PROVISIONING_PROFILE_SPECIFIER[sdk=iphoneos*]" = "VideoFeed Sample - AppStore";
 				SWIFT_EMIT_LOC_STRINGS = YES;
 				SWIFT_VERSION = 5.0;
 				TARGETED_DEVICE_FAMILY = "1,2";

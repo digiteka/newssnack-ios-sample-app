@@ -1,4 +1,4 @@
-# Digiteka NewsSnack Framework
+# Digiteka VideoFeed Framework
 
 [![en](https://img.shields.io/badge/lang-en-red.svg)](ReadMe.md)
 [![fr](https://img.shields.io/badge/lang-fr-blue.svg)](ReadMe.fr.md)
@@ -11,13 +11,13 @@ Simply add the dependency to your project using one of this solution:
 
 ## CocoaPods
 
-You can use [CocoaPods](https://cocoapods.org/) to install `NewsSnackSDK` by adding it to your `Podfile`:
+You can use [CocoaPods](https://cocoapods.org/) to install `VideoFeedSDK` by adding it to your `Podfile`:
 
-`pod 'NewsSnackSDK', '~> 1.0.0'`
+`pod 'VideoFeedSDK', '~> 1.0.0'`
 
 ## Swift Package Manager
 
-You can integrate `NewsSnackSDK` as a Swift package by adding the following URL to the public package repository that you can add in Xcode:
+You can integrate `VideoFeedSDK` as a Swift package by adding the following URL to the public package repository that you can add in Xcode:
 
 `https://bitbucket.org/beappers/digiteka.newssnack.ios/`
 
@@ -26,9 +26,9 @@ You can integrate `NewsSnackSDK` as a Swift package by adding the following URL 
 Then in the `application(_:, didFinishLaunchingWithOptions:)` of your `ApplicationDelegate` class, add the following code to initialize the sdk:
 
 	do {
-		try NewsSnack.shared.initialize(config: DTKNSConfig(apiKey: "01472001"))
+		try VideoFeed.shared.initialize(config: DTKNSConfig(apiKey: "01472001"))
 	} catch {
-		print("Can't init NewsSnack with error \(error.localizedDescription)")
+		print("Can't init VideoFeed with error \(error.localizedDescription)")
 	}
 
 ## Logger
@@ -55,7 +55,7 @@ Optionally, you can set a custom logger in order to retrieve logs from the sdk. 
 
 Then pass the logger:
 
-	NewsSnack.shared.setLoggerDelegate(self)
+	VideoFeed.shared.setLoggerDelegate(self)
 
 ## Tracking
 
@@ -69,15 +69,15 @@ Optionally, you can set a custom tracker in order to track events from the sdk. 
 
 Then pass the tracker:
 
-	NewsSnack.shared.setTrackingDelegate(self)
+	VideoFeed.shared.setTrackingDelegate(self)
 
-## Displaying the NewsSnack UIViewController
+## Displaying the VideoFeed UIViewController
 
-The `NewsSnackSDK` provide a UIViewController that you can use as you want
+The `VideoFeedSDK` provide a UIViewController that you can use as you want
 Here in the example, the UIViewController is show as a modal:
 
 	do {
-		let vc = try NewsSnack.shared.newsSnackViewController()
+		let vc = try VideoFeed.shared.videoFeedViewController()
 		present(vc, animated: true)
 	} catch {
 		print(error)
@@ -85,10 +85,10 @@ Here in the example, the UIViewController is show as a modal:
 
 ### Customizing the UI
 
-By default, NewsSnack UIViewController will use system configuration.
-The UI can be customized by passing a `DTKNSUIConfig` instance to the `NewsSnackSDK`:
+By default, VideoFeed UIViewController will use system configuration.
+The UI can be customized by passing a `DTKNSUIConfig` instance to the `VideoFeedSDK`:
 
-	let vc = try NewsSnack.shared.newsSnackViewController(
+	let vc = try VideoFeed.shared.videoFeedViewController(
         uiConfig: DTKNSUIConfig(
             titleFont: UIFont.boldSystemFont(ofSize: 42),
             descriptionFont: UIFont.italicSystemFont(ofSize: 12),
@@ -104,7 +104,7 @@ The UI can be customized by passing a `DTKNSUIConfig` instance to the `NewsSnack
 |---------------|--------------|----------|--------------------------------------------------------------------------------------------------------------------------------------------|-----------------------------------------------------------------------------------------------------------------------------|
 | Configuration | DTKNS_CONF_1 | Critical | MDTK must not be null, empty or blank. Please provide a valid Api Key.                                                                     | mdtk is null or empty                                                                                                       |  
 | Configuration | DTKNS_CONF_2 | Error    | No data were provided for your Api key (mdtk), please check your Api Key is valid, and you do provide data for it in the digiteka console. | The mdtk is not valid, or no video has been configured in the digiteka console                                              |  
-| Configuration | DTKNS_CONF_3 | Error    | NewsSnack sdk has not yet been initialized. Please call `NewsSnack.shared.initialize` first.                                                      | `NewsSnack.shared.initialize` has not been called yet                                                                              |  
+| Configuration | DTKNS_CONF_3 | Error    | VideoFeed sdk has not yet been initialized. Please call `VideoFeed.shared.initialize` first.                                                      | `VideoFeed.shared.initialize` has not been called yet                                                                              |  
 | Configuration | DTKNS_CONF_4 | Warning  | No video available in zone                                                                                                                 | No video is available for this zone                                                                                         |  
 | Network       |              | Info     | Network connection re-established                                                                                                          | Network connection was lost and has been re-established                                                                     |  
 | Network       | DTKNS_NET_1  | Warning  | Network connection lost.                                                                                                                   | Lost network connection                                                                                                     |  
