@@ -330,7 +330,7 @@
 					"$(inherited)",
 					"@executable_path/Frameworks",
 				);
-				MARKETING_VERSION = 1.1.0;
+				MARKETING_VERSION = 1.1.4;
 				PRODUCT_BUNDLE_IDENTIFIER = com.beapp.dtk.VideoFeedSample;
 				PRODUCT_NAME = "$(TARGET_NAME)";
 				SWIFT_EMIT_LOC_STRINGS = YES;
@@ -365,7 +365,7 @@
 					"$(inherited)",
 					"@executable_path/Frameworks",
 				);
-				MARKETING_VERSION = 1.1.0;
+				MARKETING_VERSION = 1.1.4;
 				PRODUCT_BUNDLE_IDENTIFIER = com.beapp.dtk.VideoFeedSample;
 				PRODUCT_NAME = "$(TARGET_NAME)";
 				PROVISIONING_PROFILE_SPECIFIER = "";
@@ -405,7 +405,7 @@
 			repositoryURL = "https://github.com/digiteka/newssnack-ios-build.git";
 			requirement = {
 				kind = exactVersion;
-				version = 1.1.1;
+				version = 1.1.4;
 			};
 		};
 /* End XCRemoteSwiftPackageReference section */
